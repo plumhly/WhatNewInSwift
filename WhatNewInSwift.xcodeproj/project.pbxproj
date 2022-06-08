@@ -23,6 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3817FF0428508C5C00B11F9B /* Introduce existential any.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Introduce existential any.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		382D7FEC25D130F2009D64E2 /* Universal Self.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Universal Self.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		382D7FEE25D1382C009D64E2 /* Opaque return types.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Opaque return types.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		382D803B25D150B6009D64E2 /* Matching optional enums against non-optionals.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Matching optional enums against non-optionals.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -35,6 +36,10 @@
 		382D804C25D25807009D64E2 /* Multiple variadic parameters in functions.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Multiple variadic parameters in functions.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		382D804F25D25CD0009D64E2 /* Dynamic member look up.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Dynamic member look up.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		382D805125D26227009D64E2 /* Property wrappers .playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Property wrappers .playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		38BB6572284DF94D00C1616A /* AsyncAwait.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = AsyncAwait.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		38BB6573284E015E00C1616A /* Structured concurrency.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Structured concurrency.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		38BB6575284F588700C1616A /* Actors.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Actors.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		38BB6576284F608B00C1616A /* lazy.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = lazy.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		38C36CAB25D11D33002E56D0 /* WhatNewInSwift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WhatNewInSwift; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C36CAE25D11D33002E56D0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		38C36CB825D11D67002E56D0 /* RawString.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RawString.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -54,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3817FF032850899900B11F9B /* 5.6 */ = {
+			isa = PBXGroup;
+			children = (
+				3817FF0428508C5C00B11F9B /* Introduce existential any.playground */,
+			);
+			path = 5.6;
+			sourceTree = "<group>";
+		};
 		382D7FEB25D12D10009D64E2 /* 5.1 */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +114,17 @@
 			path = 4.2;
 			sourceTree = "<group>";
 		};
+		38BB6571284DF90D00C1616A /* 5.5 */ = {
+			isa = PBXGroup;
+			children = (
+				38BB6572284DF94D00C1616A /* AsyncAwait.playground */,
+				38BB6573284E015E00C1616A /* Structured concurrency.playground */,
+				38BB6575284F588700C1616A /* Actors.playground */,
+				38BB6576284F608B00C1616A /* lazy.playground */,
+			);
+			path = 5.5;
+			sourceTree = "<group>";
+		};
 		38C36CA225D11D33002E56D0 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +144,8 @@
 		38C36CAD25D11D33002E56D0 /* WhatNewInSwift */ = {
 			isa = PBXGroup;
 			children = (
+				3817FF032850899900B11F9B /* 5.6 */,
+				38BB6571284DF90D00C1616A /* 5.5 */,
 				382D804E25D25CC4009D64E2 /* 4.2 */,
 				382D804B25D2573C009D64E2 /* 5.4 */,
 				382D804425D236B1009D64E2 /* 5.3 */,
@@ -169,7 +195,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1230;
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					38C36CAA25D11D33002E56D0 = {
 						CreatedOnToolsVersion = 12.3;
@@ -324,10 +350,12 @@
 		38C36CB325D11D33002E56D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5699EJAJ2E;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -335,10 +363,12 @@
 		38C36CB425D11D33002E56D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5699EJAJ2E;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
